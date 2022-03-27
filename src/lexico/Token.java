@@ -15,7 +15,7 @@ public class Token {
     public final static int TK_FALSE = 9;
     public final static int TK_TRUE = 10;
     public final static int TK_WRITE = 11;
-    public final static int TK_NUMEROS = 12;
+    public final static int TK_CTE = 12;
     public final static int TK_OP_AD = 14;
     public final static int TK_OP_MULT = 15;
     public final static int TK_OP_LOG = 16;
@@ -31,7 +31,6 @@ public class Token {
     public final static int TK_COMENT = 26;
     public final static int TK_CADEIA = 27;
     public final static int TK_IDENT = 28;
-    public final static int TK_CONST_INT = 29;
 
     private int tipo;
     private String atributo;
