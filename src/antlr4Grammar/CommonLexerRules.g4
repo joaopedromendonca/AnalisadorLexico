@@ -1,30 +1,28 @@
+lexer grammar CommonLexerRules;
+
 PROGRAM : 'PROGRAM';
 INTEGER : 'INTEGER';
 BOOLEAN : 'BOOLEAN';
 BEGIN : 'BEGIN';
 END : 'END';
 WHILE : 'WHILE';
+IF: 'IF';
+THEN: 'THEN';
+ELSE: 'ELSE';
 DO : 'DO';
 READ : 'READ';
 VAR : 'VAR';
 FALSE : 'FALSE';
 TRUE : 'TRUE';
 WRITE : 'WRITE';
-IDENTIFIER : [a..zA..Z][a..z|A..Z|0..9]*
-CTE : (próprio numero) : [0..9]+ ? -[0..9]+
-OPAD : '+';
-OPAD : '-';
-OPMULT : '*';
-OPMULT : '/';
-OPLOG : 'OR';
-OPLOG : 'AND';
+IDENTIFIER : [a-zA-Z][a-zA-Z0-9]*;
+CTE : [0-9]+ ? '-'[0-9]+;
+STRING : '"'[a-zA-Z0-9]*'"';
+OPAD : '+' | '-';
+OPMULT : '*' | '/';
+OPLOG : 'OR' | 'AND';
 OPNEG : '~';
-OPREL : '<';
-OPREL : '<=';
-OPREL : '>';
-OPREL : '>=';
-OPREL : '==';
-OPREL : '<>';
+OPREL : '<' | '<=' | '>' | '>=' | '==' | '<>';
 PVIG : ';';
 PONTO : '.';
 DPONTOS : ':';
@@ -32,4 +30,4 @@ VIG : ',';
 ABPAR : '(';
 FPAR : ')';
 ATRIB : ':=';
-WS : [ \t\n\r]+ -> skip;
+WS : (' '|'\t'|'\n'|'\r')+ -> skip;
