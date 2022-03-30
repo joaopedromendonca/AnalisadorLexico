@@ -1,4 +1,4 @@
-// Generated from /home/jp/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/LabeledExpr.g4 by ANTLR 4.8
+// Generated from /home/joao/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/LabeledExpr.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
