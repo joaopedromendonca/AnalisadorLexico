@@ -1,4 +1,4 @@
-// Generated from /home/joao/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/CommonLexerRules.g4 by ANTLR 4.8
+// Generated from /home/jp/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/CommonLexerRules.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

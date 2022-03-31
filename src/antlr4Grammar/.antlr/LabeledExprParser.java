@@ -1,4 +1,4 @@
-// Generated from /home/joao/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/LabeledExpr.g4 by ANTLR 4.8
+// Generated from /home/jp/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/LabeledExpr.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -18,11 +18,12 @@ public class LabeledExprParser extends Parser {
 	public static final int
 		Decls=1, ListDecl=2, DeclTip=3, ListId=4, Tip=5, CmdComp=6, ListCmd=7, 
 		Cmd=8, CmdIf=9, CmdWhile=10, CmdRead=11, CmdWrite=12, ListW=13, ElemW=14, 
-		CmdAtrib=15, Expr=16, Exprl=17, PROGRAM=18, INTEGER=19, BOOLEAN=20, BEGIN=21, 
-		END=22, WHILE=23, IF=24, THEN=25, ELSE=26, DO=27, READ=28, VAR=29, FALSE=30, 
-		TRUE=31, WRITE=32, IDENTIFIER=33, CTE=34, STRING=35, OPAD=36, OPMULT=37, 
-		OPLOG=38, OPNEG=39, OPREL=40, PVIG=41, PONTO=42, DPONTOS=43, VIG=44, ABPAR=45, 
-		FPAR=46, ATRIB=47, WS=48;
+		CmdAtrib=15, Expr=16, Exprr=17, Expra=18, Exprm=19, Expraf=20, Exprrf=21, 
+		PROGRAM=22, INTEGER=23, BOOLEAN=24, BEGIN=25, END=26, WHILE=27, IF=28, 
+		THEN=29, ELSE=30, DO=31, READ=32, VAR=33, FALSE=34, TRUE=35, WRITE=36, 
+		IDENTIFIER=37, CTE=38, STRING=39, OPAD=40, OPMULT=41, OPLOG=42, OPNEG=43, 
+		OPREL=44, PVIG=45, PONTO=46, DPONTOS=47, VIG=48, ABPAR=49, FPAR=50, ATRIB=51, 
+		WS=52;
 	public static final int
 		RULE_prog = 0;
 	private static String[] makeRuleNames() {
@@ -35,10 +36,11 @@ public class LabeledExprParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, "'PROGRAM'", "'INTEGER'", "'BOOLEAN'", 
-			"'BEGIN'", "'END'", "'WHILE'", "'IF'", "'THEN'", "'ELSE'", "'DO'", "'READ'", 
-			"'VAR'", "'FALSE'", "'TRUE'", "'WRITE'", null, null, null, null, null, 
-			null, "'~'", null, "';'", "'.'", "':'", "','", "'('", "')'", "':='"
+			null, null, null, null, null, null, null, null, null, null, "'PROGRAM'", 
+			"'INTEGER'", "'BOOLEAN'", "'BEGIN'", "'END'", "'WHILE'", "'IF'", "'THEN'", 
+			"'ELSE'", "'DO'", "'READ'", "'VAR'", "'FALSE'", "'TRUE'", "'WRITE'", 
+			null, null, null, null, null, null, "'~'", null, "';'", "'.'", "':'", 
+			"','", "'('", "')'", "':='"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -46,11 +48,11 @@ public class LabeledExprParser extends Parser {
 		return new String[] {
 			null, "Decls", "ListDecl", "DeclTip", "ListId", "Tip", "CmdComp", "ListCmd", 
 			"Cmd", "CmdIf", "CmdWhile", "CmdRead", "CmdWrite", "ListW", "ElemW", 
-			"CmdAtrib", "Expr", "Exprl", "PROGRAM", "INTEGER", "BOOLEAN", "BEGIN", 
-			"END", "WHILE", "IF", "THEN", "ELSE", "DO", "READ", "VAR", "FALSE", "TRUE", 
-			"WRITE", "IDENTIFIER", "CTE", "STRING", "OPAD", "OPMULT", "OPLOG", "OPNEG", 
-			"OPREL", "PVIG", "PONTO", "DPONTOS", "VIG", "ABPAR", "FPAR", "ATRIB", 
-			"WS"
+			"CmdAtrib", "Expr", "Exprr", "Expra", "Exprm", "Expraf", "Exprrf", "PROGRAM", 
+			"INTEGER", "BOOLEAN", "BEGIN", "END", "WHILE", "IF", "THEN", "ELSE", 
+			"DO", "READ", "VAR", "FALSE", "TRUE", "WRITE", "IDENTIFIER", "CTE", "STRING", 
+			"OPAD", "OPMULT", "OPLOG", "OPNEG", "OPREL", "PVIG", "PONTO", "DPONTOS", 
+			"VIG", "ABPAR", "FPAR", "ATRIB", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -170,11 +172,11 @@ public class LabeledExprParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\62\22\4\2\t\2\3\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\66\22\4\2\t\2\3\2"+
 		"\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\5\2\20\n\2\3\2\2\2\3\2\2\2\2"+
-		"\21\2\17\3\2\2\2\4\5\7\24\2\2\5\6\7#\2\2\6\7\7+\2\2\7\b\7\3\2\2\b\t\7"+
-		"\b\2\2\t\20\7,\2\2\n\13\7\24\2\2\13\f\7#\2\2\f\r\7+\2\2\r\16\7\b\2\2\16"+
-		"\20\7,\2\2\17\4\3\2\2\2\17\n\3\2\2\2\20\3\3\2\2\2\3\17";
+		"\21\2\17\3\2\2\2\4\5\7\30\2\2\5\6\7\'\2\2\6\7\7/\2\2\7\b\7\3\2\2\b\t\7"+
+		"\b\2\2\t\20\7\60\2\2\n\13\7\30\2\2\13\f\7\'\2\2\f\r\7/\2\2\r\16\7\b\2"+
+		"\2\16\20\7\60\2\2\17\4\3\2\2\2\17\n\3\2\2\2\20\3\3\2\2\2\3\17";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
