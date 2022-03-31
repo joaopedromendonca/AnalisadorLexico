@@ -1,6 +1,4 @@
-package antlr4Grammar;
-
-// Generated from LabeledExpr.g4 by ANTLR 4.9.3
+// Generated from /home/joao/unit/compiladores/AnalisadorLexico/src/antlr4Grammar/LabeledExpr.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -12,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class LabeledExprParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.9.3", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -121,11 +119,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_prog; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitProg(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ProgContext prog() throws RecognitionException {
@@ -189,11 +182,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_decls; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitDecls(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final DeclsContext decls() throws RecognitionException {
@@ -230,11 +218,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_listDecl; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitListDecl(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ListDeclContext listDecl() throws RecognitionException {
@@ -286,11 +269,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_declTip; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitDeclTip(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final DeclTipContext declTip() throws RecognitionException {
@@ -330,11 +308,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_listId; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitListId(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ListIdContext listId() throws RecognitionException {
@@ -383,11 +356,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_tip; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitTip(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final TipContext tip() throws RecognitionException {
@@ -430,11 +398,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdComp; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmdComp(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdCompContext cmdComp() throws RecognitionException {
@@ -474,11 +437,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_listCmd; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitListCmd(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ListCmdContext listCmd() throws RecognitionException {
@@ -542,11 +500,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmd; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmd(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdContext cmd() throws RecognitionException {
@@ -630,11 +583,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdIf; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmdIf(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdIfContext cmdIf() throws RecognitionException {
@@ -700,11 +648,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdWhile; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmdWhile(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdWhileContext cmdWhile() throws RecognitionException {
@@ -745,11 +688,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdRead; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmdRead(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdReadContext cmdRead() throws RecognitionException {
@@ -790,11 +728,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdWrite; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmdWrite(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdWriteContext cmdWrite() throws RecognitionException {
@@ -836,11 +769,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_listW; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitListW(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ListWContext listW() throws RecognitionException {
@@ -890,11 +818,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elemW; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitElemW(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ElemWContext elemW() throws RecognitionException {
@@ -949,11 +872,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_cmdAtrib; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitCmdAtrib(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final CmdAtribContext cmdAtrib() throws RecognitionException {
@@ -994,11 +912,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitExpr(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -1050,11 +963,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprr; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitExprr(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprrContext exprr() throws RecognitionException {
@@ -1107,11 +1015,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expra; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitExpra(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExpraContext expra() throws RecognitionException {
@@ -1164,11 +1067,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprm; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitExprm(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprmContext exprm() throws RecognitionException {
@@ -1224,11 +1122,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expraf; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitExpraf(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprafContext expraf() throws RecognitionException {
@@ -1354,11 +1247,6 @@ public class LabeledExprParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprrf; }
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LabeledExprVisitor ) return ((LabeledExprVisitor<? extends T>)visitor).visitExprrf(this);
-			else return visitor.visitChildren(this);
-		}
 	}
 
 	public final ExprrfContext exprrf() throws RecognitionException {

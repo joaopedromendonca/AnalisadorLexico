@@ -25,10 +25,10 @@ cmdWhile: WHILE exprr DO cmd;
 cmdRead: READ ABPAR listId FPAR;
 cmdWrite: WRITE ABPAR listW FPAR;
 listW: elemW | elemW VIG listW;
-elemW: expr | STRING;
+elemW: expr | CADEIA;
 
 // Aceita ambas expressões relacionais e aritiméticas
-cmdAtrib: IDENTIFIER ATRIB CTE PVIG;
+cmdAtrib: IDENTIFIER ATRIB expr PVIG;
 
 // Expressão genérica que pode ser avaliada em OPREL OU OPAD/OPMUL
 expr: expra
