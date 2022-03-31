@@ -3,74 +3,74 @@ grammar LabeledExpr;
 import CommonLexerRules;
 
 // trecho ambíguo removido, Decls podia ser vazio, causando ambiguidade, solução: na regra que chama Decls criar alternativa sem ele e remover epsilon.
-prog : PROGRAM IDENTIFIER PVIG Decls CmdComp PONTO | PROGRAM IDENTIFIER PVIG CmdComp PONTO;
+prog : PROGRAM IDENTIFIER PVIG decls cmdComp PONTO | PROGRAM IDENTIFIER PVIG cmdComp PONTO ;
 
-Decls: VAR ListDecl;
-ListDecl: DeclTip | DeclTip ListDecl;
-DeclTip: ListId DPONTOS Tip PVIG;
-ListId: IDENTIFIER | IDENTIFIER VIG ListId;
-Tip: INTEGER | BOOLEAN | STRING;
+decls: VAR listDecl;
+listDecl: declTip | declTip listDecl;
+declTip: listId DPONTOS tip PVIG;
+listId: IDENTIFIER | IDENTIFIER VIG listId;
+tip: INTEGER | BOOLEAN | STRING;
 
-CmdComp: BEGIN ListCmd END;
-ListCmd: Cmd | Cmd PVIG ListCmd;
-Cmd: CmdIf | CmdWhile | CmdRead | CmdWrite | CmdAtrib | CmdComp;
-
-// modificado para aceitar apenas expressões relacionais e não aritiméticas
-CmdIf: IF Exprr THEN Cmd | IF Exprr THEN Cmd ELSE Cmd;
+cmdComp: BEGIN listCmd END;
+listCmd: cmd | cmd PVIG listCmd;
+cmd: cmdIf | cmdWhile | cmdRead | cmdWrite | cmdAtrib | cmdComp;
 
 // modificado para aceitar apenas expressões relacionais e não aritiméticas
-CmdWhile: WHILE Exprr DO Cmd;
+cmdIf: IF exprr THEN cmd | IF exprr THEN cmd ELSE cmd;
+
+// modificado para aceitar apenas expressões relacionais e não aritiméticas
+cmdWhile: WHILE exprr DO cmd;
 
 // Aceita ambas expressões relacionais e aritiméticas
-CmdRead: READ ABPAR ListId FPAR;
-CmdWrite: WRITE ABPAR ListW FPAR;
-ListW: ElemW | ElemW VIG ListW;
-ElemW: Expr | STRING;
+cmdRead: READ ABPAR listId FPAR;
+cmdWrite: WRITE ABPAR listW FPAR;
+listW: elemW | elemW VIG listW;
+elemW: expr | STRING;
 
 // Aceita ambas expressões relacionais e aritiméticas
-CmdAtrib: IDENTIFIER ATRIB Expr;
+cmdAtrib: IDENTIFIER ATRIB expr;
 
 // Expressão genérica que pode ser avaliada em OPREL OU OPAD/OPMUL
-Expr: Exprr
-    | Expra
+expr: exprr
+    | expra
     ;
 
 // Expressão de operador relacional, sempre retorna booleano mas avalia aritiméticos também
-Exprr: Exprrf 
-    | Expra OPREL Expr
+exprr: exprrf 
+    | expra OPREL expr
     ;
 
 // Expressões de adição e multiplicação respeitando associatividade
-Expra: Exprm 
-    | Exprm OPAD Expr
+expra: exprm 
+    | exprm OPAD expr
     ;
 
-Exprm: Expraf 
-    | Expraf OPMULT Expr
+exprm: expraf 
+    | expraf OPMULT expr
     ;
 
 // Expressão final para operadores de adição e multiplicação, avalia em termos aritiméticos e booleanos
-Expraf: IDENTIFIER
+expraf: IDENTIFIER
     | CTE
-    | ABPAR Expr FPAR
+    | ABPAR expr FPAR
     | TRUE
     | FALSE
     | OPNEG IDENTIFIER 
     | OPNEG CTE 
-    | OPNEG ABPAR Expr FPAR 
+    | OPNEG ABPAR expr FPAR 
     | OPNEG TRUE 
     | OPNEG FALSE
     ;
 
 // Expressão final para operador de relação, avalia somente em termos de booleano
-Exprrf: IDENTIFIER
+exprrf: IDENTIFIER
     | CTE
-    | ABPAR Exprr FPAR
+    | ABPAR exprr FPAR
     | TRUE
     | FALSE
     | OPNEG IDENTIFIER 
     | OPNEG CTE 
-    | OPNEG ABPAR Exprr FPAR 
+    | OPNEG ABPAR exprr FPAR 
     | OPNEG TRUE 
     | OPNEG FALSE
     ;

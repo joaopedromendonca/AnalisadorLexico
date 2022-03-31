@@ -1,0 +1,5 @@
+xd;
+VAR jp : STRING;
+BEGIN
+jp := "jp";
+END
