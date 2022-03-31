@@ -1,4 +1,4 @@
-xd;
+PROGRAM xd;
 VAR jp : STRING;
 BEGIN
 jp := "jp";

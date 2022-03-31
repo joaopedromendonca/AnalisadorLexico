@@ -28,11 +28,11 @@ listW: elemW | elemW VIG listW;
 elemW: expr | STRING;
 
 // Aceita ambas expressões relacionais e aritiméticas
-cmdAtrib: IDENTIFIER ATRIB expr;
+cmdAtrib: IDENTIFIER ATRIB CTE PVIG;
 
 // Expressão genérica que pode ser avaliada em OPREL OU OPAD/OPMUL
-expr: exprr
-    | expra
+expr: expra
+    | exprr
     ;
 
 // Expressão de operador relacional, sempre retorna booleano mas avalia aritiméticos também
