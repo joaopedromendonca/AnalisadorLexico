@@ -29,7 +29,7 @@ public class Main {
         LabeledExprLexer lexer = new LabeledExprLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         LabeledExprParser parser = new LabeledExprParser(tokens);
-
+        
         // descomentar para imprimir os tokens lidos, porém não imprime a árvore pois o itetator foi limpo
         System.out.println("Imprimindo tokens");
         Object[] tokens_string = lexer.getAllTokens().toArray();
@@ -40,16 +40,13 @@ public class Main {
         System.out.println(parser.getNumberOfSyntaxErrors());
 
 
-        System.out.println("Imprimindo árvore");
-        ParseTree tree = parser.prog();
-        parser.setBuildParseTree(true);
+        // System.out.println("Imprimindo árvore");
+        // ParseTree tree = parser.prog();
+        // parser.setBuildParseTree(true);
         
-        System.out.println(tree.toStringTree(parser));
+        // System.out.println(tree.toStringTree(parser));
         
         is.close();
-        // @Deprecated
-        // EvalVisitor eval = new EvalVisitor();
-        // eval.visit(tree);
 
         System.out.println("Acabou.");
 
