@@ -31,20 +31,18 @@ public class Main {
         LabeledExprParser parser = new LabeledExprParser(tokens);
         
         // descomentar para imprimir os tokens lidos, porém não imprime a árvore pois o itetator foi limpo
-        System.out.println("Imprimindo tokens");
-        Object[] tokens_string = lexer.getAllTokens().toArray();
-        for (Object string : tokens_string) {
-            System.out.println(string);
-        }
-
-        System.out.println(parser.getNumberOfSyntaxErrors());
+        // System.out.println("Imprimindo tokens");
+        // Object[] tokens_string = lexer.getAllTokens().toArray();
+        // for (Object string : tokens_string) {
+        //     System.out.println(string);
+        // }
 
 
-        // System.out.println("Imprimindo árvore");
-        // ParseTree tree = parser.prog();
-        // parser.setBuildParseTree(true);
+        System.out.println("Imprimindo árvore");
+        ParseTree tree = parser.prog();
+        parser.setBuildParseTree(true);
         
-        // System.out.println(tree.toStringTree(parser));
+        System.out.println(tree.toStringTree(parser));
         
         is.close();
 

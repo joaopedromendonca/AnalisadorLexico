@@ -1,9 +1,7 @@
-PROGRAM xd;
-VAR jp : STRING;
-//teste////////////
+PROGRAM teste;
+VAR cadeia : INTEGER;
 BEGIN
-///das213ddkas
-jp := 11 + 3 * -5 / -21331;
+cadeia := 11 + 3 * -5 / -21331 - 213;
 WRITE("isso 3 uma string");
-IF ()
+IF (1+2) > (3) THEN WRITE("Maior") ELSE WRITE("Menor");
 END.
