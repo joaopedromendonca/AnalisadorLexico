@@ -12,7 +12,7 @@ listId: IDENTIFIER | IDENTIFIER VIG listId;
 tip: INTEGER | BOOLEAN | STRING;
 
 cmdComp: BEGIN listCmd END;
-listCmd: cmd | cmd PVIG listCmd;
+listCmd: cmd PVIG | cmd PVIG listCmd;
 cmd: cmdIf | cmdWhile | cmdRead | cmdWrite | cmdAtrib | cmdComp;
 
 // modificado para aceitar apenas expressões relacionais e não aritiméticas
@@ -28,7 +28,7 @@ listW: elemW | elemW VIG listW;
 elemW: expr | CADEIA;
 
 // Aceita ambas expressões relacionais e aritiméticas
-cmdAtrib: IDENTIFIER ATRIB expr PVIG;
+cmdAtrib: IDENTIFIER ATRIB expr;
 
 // Expressão genérica que pode ser avaliada em OPREL OU OPAD/OPMUL
 expr: expra

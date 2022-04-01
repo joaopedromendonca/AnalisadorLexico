@@ -1,5 +1,7 @@
 PROGRAM xd;
 VAR jp : STRING;
+//teste
 BEGIN
-jp := 11 + 3 * 5 \ 21331;
+jp11 + 3 * 5 / 21331;
+WRITE("isso 3 uma string");
 END.

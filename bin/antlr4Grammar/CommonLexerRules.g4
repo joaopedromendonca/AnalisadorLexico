@@ -1,5 +1,6 @@
 lexer grammar CommonLexerRules;
 
+COMMENT : '//'(.)*?'\n';
 PROGRAM : 'PROGRAM';
 INTEGER : 'INTEGER';
 BOOLEAN : 'BOOLEAN';
@@ -32,3 +33,4 @@ ABPAR : '(';
 FPAR : ')';
 ATRIB : ':=';
 WS : (' '|'\t'|'\n'|'\r')+ -> skip;
+UNKNOWN_CHAR : .;
